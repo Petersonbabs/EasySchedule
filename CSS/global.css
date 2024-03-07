@@ -1,0 +1,267 @@
+@media screen and (min-width: 920px) {
+  .laptop-menu {
+    display: block !important;
+  }
+  #menu-icon {
+    display: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+.btnn {
+  border: none;
+  padding: 0.3rem 1.3rem;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  cursor: pointer;
+  background: #0083FF;
+  transition: background 0.5s ease;
+  color: #fff;
+  margin: 10px 0;
+}
+.btnn .fa-right-to-bracket {
+  transition: transform 0.3s ease;
+}
+
+.spinner-border {
+  margin-left: 5px;
+}
+
+.btnn:hover {
+  background: #047AE8;
+}
+.btnn:hover .fa-right-to-bracket {
+  transform: translateX(10px);
+}
+
+input {
+  display: block;
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: 3px solid #eee;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 1px black;
+}
+
+a {
+  color: #0083FF;
+}
+
+.password-container {
+  display: flex;
+  border: 3px solid #eee;
+  padding: 10px;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.password-container input {
+  border: none;
+  padding: 0;
+  outline: none;
+  margin: 0;
+}
+.password-container input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  border-radius: 8px;
+  padding: 1rem;
+  width: 400px;
+}
+form h2 {
+  margin-bottom: 1rem;
+}
+form input {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.home-container .loader {
+  font-size: 8rem;
+  position: absolute;
+  color: #0083FF;
+  display: none;
+}
+
+.home-intro {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+.home-intro .home-con {
+  animation-name: slideUp;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  width: 70%;
+  line-height: 0.8;
+  margin: auto;
+}
+.home-intro .home-con h2 span {
+  color: #0083FF;
+}
+.home-intro h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+.home-intro h1 span {
+  position: relative;
+}
+.home-intro p {
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.home-intro .home-cta {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  margin: auto;
+}
+.home-intro .home-cta a {
+  color: #fff;
+}
+
+@keyframes slideUp {
+  to {
+    display: none;
+  }
+}
+.sign-in-btn {
+  display: flex;
+  align-items: center;
+}
+
+.fa-eye {
+  font-size: 1.2rem;
+  border: #eee 3px solid;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+
+header {
+  padding: 1rem 0;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+header .header-con {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header-con .header-left span {
+  color: #0083FF;
+}
+header .header-con .laptop-menu {
+  display: none;
+}
+header .header-con .laptop-menu ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+header .header-con .laptop-menu ul li {
+  font-size: 1.3rem;
+}
+header .header-con #menu-icon {
+  border: dotted #0083FF 2px;
+  cursor: pointer;
+  color: #0083FF;
+  padding: 5px 10px;
+  font-size: 1.3rem;
+}
+header .header-con #menu-icon:hover {
+  background-color: #0083FF;
+  color: #fff;
+}
+header .show-menu {
+  width: 100%;
+}
+header nav {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  transition: width 0.5s ease;
+  background-color: #fff;
+  z-index: 99;
+  overflow: hidden;
+}
+header nav .menu-drop li {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  border: 1px solid #eee;
+}
+
+.list-events {
+  padding: 1rem;
+}
+.list-events .single-event {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+.list-events .single-event .event-left .event-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.2rem;
+}
+.list-events .single-event .event-left .event-date {
+  margin-right: 0.2rem;
+}
+.list-events .single-event .event-left span {
+  color: #666;
+}
+.list-events .single-event .event-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.list-events .single-event .event-right button {
+  padding: 5px;
+  cursor: pointer;
+}
+.list-events .single-event .event-right button:hover {
+  background-color: #fe345f;
+  border: 1px solid #fe345f;
+}
+.list-events .single-event:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}

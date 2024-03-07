@@ -1,0 +1,381 @@
+// ==========================
+// ==========================
+// GLOBAL ELEMENTS
+// ==========================
+// ==========================
+
+@import './_variable.scss';
+@import "./responsiveness";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.btnn {
+    border: none;
+    padding: .3rem 1.3rem;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+    cursor: pointer;
+    background: $blue;
+    transition: background .5s ease;
+    color: #fff;
+    margin: 10px 0;
+    .fa-right-to-bracket{
+        transition: transform .3s ease;
+    }
+}
+
+
+
+.spinner-border {
+    margin-left: 5px;
+}
+
+.btnn:hover {
+    background: $dark-blue;
+
+   
+
+    .fa-right-to-bracket{
+        // margin-left: 5px;
+        transform: translateX(10px)
+    }
+}
+
+input {
+    display: block;
+    font-size: 1rem;
+    padding: 5px 10px;
+
+    margin: 5px 0;
+    border: 3px solid #eee;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 1px black;
+}
+
+a {
+    color: $blue;
+}
+
+.password-container {
+    display: flex;
+    border: 3px solid #eee;
+    // width: fit-content;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    input {
+        border: none;
+        padding: 0;
+        outline: none;
+        margin: 0;
+    }
+
+    input:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+
+.form-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    // border: 1px solid;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 400px;
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .loader{
+        font-size: 8rem;
+        position: absolute;
+        color: $blue;
+        display: none;
+    }
+}
+
+.home-intro{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+
+
+    .home-con{
+        // display: none;
+        animation-name: slideUp;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+        width: 70%;
+        line-height: .8;
+        margin: auto;
+
+        h2 span{
+            color: $blue;
+        }
+    }
+
+    h1{
+        font-size: 3rem;
+        margin: 1rem 0;
+        
+
+        span{
+            position: relative;
+        }
+
+        
+    }
+
+    p{
+        font-size: 1.3rem;
+        font-weight: 100;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .home-cta{
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        margin: auto;
+        a{
+            color: #fff;
+        }
+    }
+}
+
+
+@keyframes slideUp {
+    to{
+        display: none;
+    }
+}
+
+.sign-in-btn{
+    display: flex;
+    align-items: center;
+}
+
+
+.fa-eye{
+    font-size: 1.2rem;
+    border: #eee 3px solid;
+    cursor: pointer;
+    padding: 2px 5px;
+}
+
+// ==========================
+// ==========================
+// END OF GLOBAL ELEMENTS
+// ==========================
+// ==========================
+
+
+
+
+// ==========================
+// ==========================
+// HEADER
+// ==========================
+// ==========================
+
+header{
+    padding: 1rem 0;
+    position: relative;
+    border-bottom: 1px solid #eee;
+
+    .header-con{
+        width: $width;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-left {
+            span{
+                color: $blue;
+            }
+        }
+
+        .laptop-menu{
+            display: none;
+
+            ul{
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+
+                li{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        #menu-icon{
+            border: dotted $blue 2px;
+            cursor: pointer;
+            color: $blue;
+            padding: 5px 10px;
+            font-size: 1.3rem;
+        }
+
+        #menu-icon:hover{
+            background-color: $blue;
+            color: #fff;
+        }
+
+        
+    }
+
+    .show-menu{
+        width: 100%;
+    }
+
+
+    // mobile menu
+    nav{
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        // width: 100%;
+        width: 0;
+        transition: width .5s ease;
+        background-color: #fff;
+        z-index: 99;
+        overflow: hidden;
+
+        
+
+        .menu-drop{
+
+            li {
+                text-align: center;
+                padding: 1rem 0;
+                font-size: 1.5rem;
+
+                border: 1px solid #eee;
+            }
+
+
+        }
+    }
+    // end of mobile menu
+}
+
+
+// ==========================
+// ==========================
+// EBD OF HEADER
+// ==========================
+// ==========================
+
+
+
+
+
+
+
+
+
+// ==========================
+// ==========================
+// EVENTS
+// ==========================
+// ==========================
+
+
+.list-events {
+    padding: 1rem;
+
+    .single-event {
+        margin: .5rem 0;
+        padding: .5rem;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+
+
+        .event-left {
+            .event-title {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: .2rem;
+            }
+
+            .event-date {
+                margin-right: .2rem;
+            }
+
+            span {
+                color: #666;
+            }
+        }
+
+        .event-right{
+            @include flex-align-center;
+            gap: 1rem;
+
+            button{
+                padding: 5px;
+                cursor: pointer;
+                
+            }
+
+            button:hover{
+                background-color: $pink;
+                border: 1px solid $pink ;
+            }
+        }
+
+
+    }
+
+    .single-event:hover {
+        background-color: #ddd;
+        cursor: pointer;
+    }
+}
+
+// ==========================
+// ==========================
+// END OF EVENTS
+// ==========================
+// ==========================

@@ -1,0 +1,369 @@
+#header {
+  padding: 10px;
+  color: #d36c6c;
+  font-size: 26px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+}
+
+#container {
+  width: 770px;
+  max-width: 95vw;
+  padding: 1rem;
+  margin: 2rem auto 1rem;
+}
+
+#weekdays {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: #247BA0;
+  margin-bottom: 0.3rem;
+}
+
+#weekdays div {
+  padding: 10px;
+}
+
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0px 0px 3px #CBD4C2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day:hover {
+  background-color: #e8faed;
+}
+
+.day + #currentDay {
+  background-color: #0083FF;
+  color: #fff;
+}
+
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #58bae4;
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.padding {
+  cursor: default !important;
+  background-color: #FFFCFF !important;
+  box-shadow: none !important;
+}
+
+#newEventInput {
+  padding: 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+
+#eventsListLoader {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  display: block;
+  color: #0083FF;
+}
+
+.list-events {
+  min-height: 300px;
+  margin-bottom: 2rem;
+}
+
+.center-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noEventMessage {
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #999;
+}
+
+#eventDetailsDate {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#newEventInput.error, .error {
+  border: 1px solid red;
+}
+
+#cancelButton,
+#deleteButton,
+#saveTodayBtn {
+  background-color: #d36c6c;
+  padding: 10px;
+}
+
+#saveButton,
+#closeButton,
+#closeTodayBtn {
+  background-color: #92a1d1;
+  padding: 10px;
+}
+
+#eventText {
+  font-size: 14px;
+}
+
+body {
+  position: relative;
+}
+
+#newEventModal,
+#eventDetails,
+#todayModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #e8f4fa;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  transform: rotateX(-50%);
+  margin: auto;
+  font-family: sans-serif;
+}
+
+#modalBackDrop {
+  display: none;
+  justify-content: start;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.eventDetailsBtns {
+  margin-top: 1rem;
+}
+
+.hasEvent {
+  background: #58bae4 !important;
+  border: 2px solid #d36c6c;
+}
+
+#todayButton {
+  background: #d36c6c;
+  cursor: pointer;
+  display: block;
+  margin-left: 2rem;
+}
+
+#todayTitleInput {
+  font-size: 1rem;
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.greeting-div {
+  margin: 1rem;
+}
+
+.greeting {
+  color: #0083FF;
+  font-weight: bold;
+}
+
+.dashboard-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.2862745098), rgba(0, 0, 0, 0.368627451), rgba(0, 0, 0, 0.3137254902)), url(../images/img-1.jpg);
+  background-size: cover;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url();
+}
+.dashboard-hero .hero-text {
+  color: #fff;
+  text-align: center;
+  width: 70%;
+}
+.dashboard-hero .hero-text h2 {
+  font-size: 2rem;
+}
+
+body {
+  position: relative;
+}
+
+.add-event {
+  position: sticky;
+  left: 90%;
+  top: 90%;
+  width: -moz-fit-content;
+  width: fit-content;
+  animation-name: bounce;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+.add-event .add-event-btn {
+  display: block;
+  height: 35px;
+  padding: 1.2rem;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url();
+  font-weight: 300;
+  width: 35px;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  background: #0083FF;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes bounce {
+  0% {
+    top: 90%;
+  }
+  50% {
+    top: 87%;
+  }
+  100% {
+    top: 90%;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+.todos, .home, .account {
+  position: absolute;
+  background: #fff;
+  padding-top: 2rem;
+  transform: translateX(10%);
+  overflow: hidden;
+  width: 80%;
+  transition: left 0.2s ease;
+}
+
+.todos, .account {
+  left: 100%;
+  overflow: hidden;
+}
+
+.tab-area {
+  position: fixed;
+  bottom: 5rem;
+  left: 0.5rem;
+}
+.tab-area .tab-con {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.tab-area .tab-con > * {
+  border: #0083FF 3px solid;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+.tab-area .tab-con div:hover {
+  background-color: #0083FF;
+  color: #fff;
+}
+.tab-area .tab-con div {
+  color: #0083FF;
+}
+
+.todos, .account {
+  margin: auto;
+  max-width: 980px;
+  height: 100vh;
+}
+.todos .todo-list, .account .todo-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+.todos .todo-list p, .account .todo-list p {
+  color: #999;
+  font-size: 1.3rem;
+}
+.todos .todo-input, .account .todo-input {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  border: 1px solid #0083FF;
+  width: 100%;
+  padding: 0.3rem;
+  border-radius: 25px;
+  height: 3rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.todos .todo-input input, .account .todo-input input {
+  border: none;
+  height: 100%;
+  width: 100%;
+  margin: 0 10px;
+}
+.todos .todo-input button, .account .todo-input button {
+  display: block;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input:focus {
+  outline: none !important;
+  border: none;
+}

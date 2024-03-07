@@ -1,0 +1,36 @@
+// COLORS
+
+$pink: #fe345f;
+$dark-pink: #e22a52;
+$blue: #0083FF;
+$dark-blue: #047AE8;
+$custom-black: #030303;
+
+
+// mixins
+
+@mixin flex-center-center{
+    display: flex;
+    align-items: center;justify-content: center;
+    background: url();
+
+}
+
+
+
+@mixin flex-align-center{
+    display: flex;
+    align-items: center;
+    
+}
+
+
+@mixin flex-space-center{
+    display: flex;
+    align-items: center;justify-content: space-between;
+    
+}
+
+// BOXES
+
+$width: 90vw;
